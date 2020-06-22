@@ -1,0 +1,367 @@
+/* Estilos */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+
+    color: #fff;
+}
+
+h3 {
+    font-weight: bold;
+
+    margin: 25px 50px 50px 50px;
+}
+
+
+/** TABELA **/
+
+#table {
+    max-width: 85%;
+    margin: 20px 50px;
+}
+
+#table-ferramentas {
+    max-width: 45%;
+    margin: 20px 50px;
+}
+
+#novoDep {
+    max-width: 85%;
+    margin: 20px 50px;
+}
+
+#novoMembro {
+    max-width: 85%;
+    margin: 20px 50px;
+}
+
+.classificar {
+    font-weight: bold;
+
+    max-width: 85%;
+    margin: 10px 50px;
+
+    color: #000;
+}
+
+
+/* Colunas das tabelas */
+
+#col1 {
+    width: 180px;
+
+    background-color: rgb(243, 243, 243);
+}
+
+#col2 {
+    width: 200px;
+
+    background-color: rgb(243, 243, 243);
+}
+
+#col3 {
+    width: 270px;
+
+    background-color: rgb(243, 243, 243);
+}
+
+#col4 {
+    width: 50px;
+
+    background-color: rgb(243, 243, 243);
+}
+
+#col5 {
+    width: 50px;
+
+    background-color: rgb(243, 243, 243);
+}
+
+#col6 {
+    width: 50px;
+
+    background-color: rgb(243, 243, 243);
+}
+
+#col7 {
+    width: 50px;
+
+    background-color: rgb(243, 243, 243);
+}
+
+
+/** LINHAS **/
+
+.row {
+    padding: 20px;
+}
+
+
+/** LINKS **/
+
+a,
+a:hover,
+a:focus {
+    transition: all .3s;
+    text-decoration: none;
+
+    color: inherit;
+}
+
+a:hover {
+    color: #e1e2e0;
+}
+
+
+/* Estilos da barra lateral */
+
+#sidebar li a:hover {
+    color: #e1e2e0;
+    background: rgba(0, 0, 0, .1);
+}
+
+.botao {
+    background-color: #1f1f28;
+}
+
+.navbar {
+    margin-bottom: 0;
+    padding: 0 10px;
+
+    border: none;
+    border-radius: 0;
+    background: #88b04b;
+    box-shadow: 1px 1px 3px #343a40;
+}
+
+.navbar-btn {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+
+    border-bottom: 1px dashed #ddd;
+}
+
+#mensagem {
+    font-size: 1.2em;
+
+    padding: 10px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+
+    width: 100%;
+
+    perspective: 1500px;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+
+    transition: all .6s cubic-bezier(.945, .020, .270, .665);
+    transform-origin: bottom left;
+
+    color: #fff;
+    background: #88b04b;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+
+    transform: rotateY(100deg);
+}
+
+#sidebar .sidebar-header {
+    padding: 20px 70px;
+
+    background: #88b04b;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+
+    border-bottom: 1px solid #7cb34f;
+}
+
+#sidebar ul p {
+    padding: 10px;
+
+    color: #fff;
+}
+
+#sidebar ul li a {
+    font-size: 1.1em;
+
+    display: block;
+
+    padding: 10px;
+}
+
+#slidebar ul li a:hover {
+    color: #7cb34f;
+    background: #fff;
+}
+
+#sidebar ul li.active > a {
+    color: #fff;
+    background: #343a40;
+}
+
+a[aria-expanded='true'] {
+    color: #fff;
+    background: #7cb34f;
+}
+
+a[data-toggle='collapse'] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    display: block;
+
+    transform: translateY(-50%);
+}
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+
+    background: #f5f5f5;
+}
+
+#sidebarCollapse span {
+    display: block;
+
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+
+    transition: all .8s all .8s cubic-bezier(.810, -.330, .345, 1.375);
+    transition-delay: .2s;
+
+    background: #555;
+}
+
+#sidebarCollapse span:first-of-type {
+    transform: rotate(45deg) translate(2px, 2px);
+}
+
+#sidebarCollapse span:nth-of-type(2) {
+    opacity: 0;
+}
+
+#sidebarCollapse span:last-of-type {
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+
+#sidebarCollapse.active span {
+    margin: 5px auto;
+
+    transform: none;
+
+    opacity: 1;
+}
+
+
+/* Itens */
+
+ul ul a {
+    font-size: .9em;
+
+    padding-left: 30px;
+
+    background: #7cb34f;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    font-size: .9em;
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    text-align: center;
+
+    border-radius: 5px;
+}
+
+a.article,
+a.article:hover,
+button {
+    margin-bottom: 10px;
+
+    color: #fff;
+    background: #343a40;
+}
+
+
+/* Conteúdo */
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+
+    transition: all .3s;
+}
+
+
+/* Formulário */
+
+form {
+    max-width: 85%;
+    margin: 20px 50px;
+}
+
+#InputDepartamento {
+    max-width: 85%;
+    margin: 5px 50px;
+}
+
+#LabelDepartamento {
+    max-width: 85%;
+    margin: 5px 50px;
+}
+
+#InputStatus {
+    max-width: 85%;
+    margin: 5px 50px;
+}
+
+#LabelStatus {
+    max-width: 85%;
+    margin: 5px 50px;
+}
+
+.BotaoFiltrar {
+    margin-top: 2.5rem;
+}
