@@ -1,4 +1,6 @@
-Os arquivos "Checklist_Hospedagem.txt" e Complementar.txt contém comandos e dicas úteis para hospedar uma aplicação Laravel no Heroku
+Treinamento oferecido à Visão Tecnologia e Sistemas.
+
+Os arquivos "Checklist_Hospedagem.txt" e Complementar.txt contém comandos e dicas úteis para hospedar uma aplicação Laravel no Heroku.
 
 A grande maior parte das dúvidas podem ser sanadas a partir da seguinte URL:
 
