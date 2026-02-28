@@ -1,0 +1,52 @@
+- Pré requisitos:
+	* Conta criada no Heroku
+	* Git instalado
+
+- Há 2 opções principais de deploy
+	* Via Heroku CLI
+	* Via GitHub
+
+- Deploy via Heroku CLI
+	* Baixar Heroku CLI
+	* No cmd: heroku login (Irá abrir o navegador, onde deve ser feito o login)
+	* Dentro da pasta do projeto Laravel:
+		- Criar arquivo "Procfile"
+		- Em "Procfile": web: vendor/bin/heroku-php-apache2 public/
+	* No cmd (dentro da pasta do projeto Laravel):
+		- git init
+		- git add .
+		- git commit -m "Iniciando repositório"
+		- heroku create
+		- [OPCIONAL (Serve para definir um repositóro remoto - similar ao "origin")] heroku git:remote -a <NOME_DO_APP (Nome obtido no comando heroku create)>
+		- git push heroku master
+
+- Deploy via GitHub
+	* Dentro da pasta do projeto Laravel:
+		- Criar arquivo "Procfile"
+		- Dentro do "Procfile": web: vendor/bin/heroku-php-apache2 public/
+	* Criar um repositório no GitHub
+	* Em uma pasta qualquer -> git clone <URL_DO_REPOSITORIO_DO_GITHUB>
+	* Copiar CONTEÚDO do projeto em Laravel para dentro do repositório clonado do GitHub
+	* No cmd (dentro da pasta do projeto Laravel):
+		- git add .
+		- git commit -m "Iniciando repositório"
+		- git push origin master
+
+- Para usar um BD remotamente:
+	- Add-on do Heroku
+
+- Para adicionar as "config vars":
+	- heroku config:add KEY=KEY_VALUE
+		- heroku config:add APP_DEBUG=true [APENAS P/ DEBUGGAR ERROS]
+		- APP_ENV = heroku config:add APP_ENV=production
+		- APP_KEY = [PEGAR DO .env DO LARAVEL]
+		- APP_NAME = [PEGAR DO .env DO LARAVEL]
+		- APP_URL = [PEGAR DO PRÓPRIO HEROKU]
+		- DB_CONNECTION, DB_DATABASE, DB_HOST, DB_PASSWORD, DB_PORT, DB_USERNAME, DATABASE_URL
+
+- Para consertar erros de "Mixed Content Page":
+	- No projeto em Laravel -> app -> Providers -> AppServiceProvider.php -> Add dentro da função boot():
+			if(config('app.env') === 'production') {
+					\URL::forceScheme('https');
+			}
+	- OBS: O APP_ENV do projeto deve ser "production"

@@ -1,0 +1,22 @@
+3 principais tipos de hospedagem:
+- Compartilhada -> Alocação de recursos é dinâmica -> blogs pequenos, sites institucionais pequenos/médios
+- VPS (Virtual Private Server) -> Alocação de recursos é fixa 
+- Cloud -> Alocação de recursos é fixa, escalabilidade é facilitada, mudança de configurações é facilitada
+
+Internet:
+- Compartilhada -> 100Mb/s ~ 60Mb/s, 70Mb/s -> 1GB/s (Operadora) -> 20 pessoas -> 50Mb/s
+- Link dedicado -> 100Mb/s -> 100Mb/s
+
+2 tipos de serviços de hospedagem (funcionam como Cloud):
+- IaaS (Infrastructure as a Service) -> Amazon Web Service (AWS)
+- PaaS (Platform as as Service) -> Heroku
+
+Opções a serem consideradas ao definir um provedor de hospedagem:
+- Pagar em dólar -> AWS, Azure, Google Cloud, Digital Ocean e Heroku
+- Pagar em real -> Hostinger, Hostgator, Hostnet
+
+* Azure é especialmente válida para apps com stack Microsoft (.NET, SQL Server, Windows Server)
+
+Hostinger
+-> Sitemas -> Armazenamento padrão
+-> BD's -> Local (comunicação mais rápida) e Remoto (comunicação mais lenta, devido à latência e dependência da largura de banda)
